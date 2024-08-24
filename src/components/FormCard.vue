@@ -6,14 +6,19 @@ export default {
             card: {
                 title: '', //Visa Classic Crédito
                 chipSrc: {
-                    '1': 'src/assets/chip-silver.png',
-                    '2': 'src/assets/chip-golden.png'
+                    '1': './img/chip-silver.png',
+                    '2': './img/chip-golden.png'
                 }, // rutas de imagenes para el tipo de chip
                 selectedChip: '', // índice del chip seleccionado 
                 number: '', // 4000 5000 6000 7000
                 expDate: '', // 01/30
                 owner: '', //William Henry Gates III
-                typeCard: '', // Visa, MasterCard, etc
+                typeCard: {
+                    '1': './img/americane.png',
+                    '2': './img/mastercard.png',
+                    '3': './img/visa.png'
+                }, // rutas de imagenes para el banco de la tarjeta
+                selectedType: '' // índice del banco seleccionado
             },
         }
     }
@@ -47,12 +52,17 @@ export default {
 
         <div>
             <label>Propietario: </label>
-            <input />
+            <input v-model="card.owner" type="text" />
         </div>
 
         <div>
             <label>Tipo de tarjeta SRC: </label>
-            <input />
+            <select class="form-select" v-model="card.selectedType">
+                <option selected disabled>Selecciona tu Banco: </option>
+                <option value="1">American Express</option>
+                <option value="2">MasterCard</option>
+                <option value="3">Visa</option>
+            </select>
         </div>
     </form>
 
@@ -64,8 +74,8 @@ export default {
             <span>Fecha Exp: <b>{{ card.expDate }}</b></span>
         </div>
         <footer>
-            <span>William Henry Gates III</span>
-            <img src="./../assets/visa.png" width="60" />
+            <span>{{ card.owner }}</span>
+            <img :src="card.typeCard[card.selectedType]" width="60" />
         </footer>
     </div>
 </template>
