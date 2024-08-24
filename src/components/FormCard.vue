@@ -1,5 +1,19 @@
 <script>
-
+export default {
+    name: 'FormCard',
+    data() {
+        return {
+            card: {
+                title: '', //Visa Classic Crédito
+                chipSrc: '',
+                number: '', // 4000 5000 6000 7000
+                expDate: '', // 01/30
+                owner: '', //William Henry Gates III
+                typeCard: '', // Visa, MasterCard, etc
+            },
+        }
+    }
+}
 </script>
 <template>
     <form>
@@ -36,14 +50,14 @@
 
     <div class="carnet">
         <h3>Visa Classic Crédito</h3>
-        <img width="40" src="/chip.png" alt="" />
+        <img width="40" src="" alt="" />
         <div>
             <h2>400 500 600 700</h2>
             <span>Fecha Exp: <b>01/30</b></span>
         </div>
         <footer>
             <span>William Henry Gates III</span>
-            <img src="/visa.png" width="60" />
+            <img src="" width="60" />
         </footer>
     </div>
 </template>

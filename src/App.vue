@@ -1,9 +1,9 @@
 <script setup>
-
+import FormCard from './components/FormCard.vue'
 </script>
 
 <template>
-    <div></div>
+    <FormCard />
 </template>
 
 <style scoped></style>
