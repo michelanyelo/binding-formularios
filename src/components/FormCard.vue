@@ -42,7 +42,7 @@ export default {
 
         <div>
             <label>Fecha de expiración: </label>
-            <input />
+            <input v-model="card.expDate" type="text" />
         </div>
 
         <div>
@@ -61,7 +61,7 @@ export default {
         <img width="40" :src="card.chipSrc[card.selectedChip]" alt="" />
         <div>
             <h2>{{ card.number }}</h2>
-            <span>Fecha Exp: <b>01/30</b></span>
+            <span>Fecha Exp: <b>{{ card.expDate }}</b></span>
         </div>
         <footer>
             <span>William Henry Gates III</span>
