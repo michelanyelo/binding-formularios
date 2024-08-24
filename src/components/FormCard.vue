@@ -23,7 +23,7 @@ export default {
     <form>
         <div>
             <label>Título de la tarjeta: </label>
-            <input v-model="title" />
+            <input v-model="card.title" type="text" />
         </div>
 
         <div>
@@ -37,7 +37,7 @@ export default {
 
         <div>
             <label>Número: </label>
-            <input />
+            <input v-model="card.number" type="text" />
         </div>
 
         <div>
@@ -57,10 +57,10 @@ export default {
     </form>
 
     <div class="carnet">
-        <h3>Visa Classic Crédito</h3>
+        <h3>{{ card.title }}</h3>
         <img width="40" :src="card.chipSrc[card.selectedChip]" alt="" />
         <div>
-            <h2>400 500 600 700</h2>
+            <h2>{{ card.number }}</h2>
             <span>Fecha Exp: <b>01/30</b></span>
         </div>
         <footer>
