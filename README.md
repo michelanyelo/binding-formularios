@@ -1,7 +1,7 @@
 # 👋 Bienvenida/o al Desafío Creando una Tarjeta de Crédito con VUE!
 
 ## 📝 Descripción
-Este proyecto es parte del módulo "Desarrollo de interfaces interactivas con framework Vue" del BootCamp Desarrollo de aplicaciones Front End Trainee de DesafíoLatam. El objetivo fue validar los conocimientos de interpolación de variables en templates de Vue Js.
+Este proyecto es parte del módulo "Desarrollo de interfaces interactivas con framework Vue" del BootCamp Desarrollo de aplicaciones Front End Trainee de DesafíoLatam. El objetivo fue validar los conocimientos del data binding en Vue Js a través del uso de las directivas.
 
 ## 🌐 Tecnologías Utilizadas
 
