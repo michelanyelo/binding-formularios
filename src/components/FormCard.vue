@@ -5,7 +5,11 @@ export default {
         return {
             card: {
                 title: '', //Visa Classic Crédito
-                chipSrc: '',
+                chipSrc: {
+                    '1': 'src/assets/chip-silver.png',
+                    '2': 'src/assets/chip-golden.png'
+                }, // rutas de imagenes para el tipo de chip
+                selectedChip: '', // índice del chip seleccionado 
                 number: '', // 4000 5000 6000 7000
                 expDate: '', // 01/30
                 owner: '', //William Henry Gates III
@@ -19,12 +23,16 @@ export default {
     <form>
         <div>
             <label>Título de la tarjeta: </label>
-            <input />
+            <input v-model="title" />
         </div>
 
         <div>
             <label>Chip SRC: </label>
-            <input />
+            <select class="form-select" v-model="card.selectedChip">
+                <option selected disabled>Selecciona el tipo de Chip: </option>
+                <option value="1">Chip Plateado</option>
+                <option value="2">Chip Dorado</option>
+            </select>
         </div>
 
         <div>
@@ -50,14 +58,14 @@ export default {
 
     <div class="carnet">
         <h3>Visa Classic Crédito</h3>
-        <img width="40" src="" alt="" />
+        <img width="40" :src="card.chipSrc[card.selectedChip]" alt="" />
         <div>
             <h2>400 500 600 700</h2>
             <span>Fecha Exp: <b>01/30</b></span>
         </div>
         <footer>
             <span>William Henry Gates III</span>
-            <img src="" width="60" />
+            <img src="./../assets/visa.png" width="60" />
         </footer>
     </div>
 </template>
